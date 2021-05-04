@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Кофейный блокнот</string>
+    <string name="main_title">Кофейный блокнот</string>
+
+    <string name="click_me">Нажми</string>
+    <string name="menu_item_add">Добавить запись</string>
+    <string name="manu_item_delete">Удалить записи</string>
+
+    <string name="note_title">Название</string>
+    <string name="note_date">Дата </string>
+
+    <string name="noteitem_date">Дата создания заметки</string>
+    <string name="noteitem_category">Нет тегов</string>
+    <string name="noteitem_title">Название</string>
+    <string name="note_balance">Баланс</string>
+    <string name="note_tags">Страна не указана</string>
+
+    <string name="coffee_name">Название</string>
+    <string name="date">Дата создания заметки: </string>
+    <string name="roasting_date">Дата обжарки</string>
+    <string name="coffee_country">Страна</string>
+    <string name="roaster_info">Информация от обжарщика</string>
+    <string name="dry_aroma">Сухой аромат</string>
+    <string name="wet_aroma">Влажный аромат</string>
+    <string name="sweetness">Сладость</string>
+    <string name="acidity">Кислотность</string>
+    <string name="body">Тело</string>
+    <string name="balance">Баланс: </string>
+    <string name="flavour">Дескрипторы</string>
+
+    <string name="sort_menu">Сртировка</string>
+    <string name="action_search">Поиск</string>
+    <string name="action_delete_notes">Удалить записи</string>
+    <string name="action_sort_by_created">Сортировать по дате создания</string>
+    <string name="action_sort_by_tags">Сортировать по странам</string>
+    <string name="action_sort_by_acid">Сортировка по кислотности</string>
+    <string name="action_sort_by_sweet">Сортировка по сладости</string>
+    <string name="action_sort_by_balance">Сортировка по балансу</string>
+</resources>

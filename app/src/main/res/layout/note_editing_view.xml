@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.coffeeapp.ui.addeditnote.AddEditNoteFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            tools:ignore="ExtraText">
+
+            <EditText
+                android:id="@+id/noteTitleMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/note_item"
+                android:hint="Название"
+                android:minWidth="200dp"
+                android:text="@string/noteitem_title"
+                android:textColor="@color/text"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:text="@string/coffee_country" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/TagsChipGroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:chipSpacingHorizontal="3dp"
+                app:chipSpacingVertical="4dp">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/noteTagsMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/note_item"
+                    android:hint="@string/coffee_country"
+                    android:minWidth="90dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="7dp"
+                    android:textColorHint="@color/light_text"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="14dp"
+                    android:textColor="@color/black"
+                    android:text="@string/date" />
+
+                <TextView
+                    android:id="@+id/noteDateMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0"
+                    android:gravity="left"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="14dp"
+                    android:text="@string/noteitem_date"
+                    android:textColor="@color/light_text" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:text="@string/roasting_date" />
+
+            <EditText
+                android:id="@+id/roastingDate"
+                style="@style/edit_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/roasting_date"
+                android:textColorHint="@color/light_text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:text="@string/roaster_info" />
+
+            <EditText
+                android:id="@+id/roasterInfo"
+                style="@style/edit_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/roaster_info"
+                android:textColorHint="@color/light_text" />
+
+            //Сухой аромат
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:text="@string/dry_aroma" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/dryAroma"
+                    style="@style/edit_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/dry_aroma"
+                    android:minWidth="200dp"
+                    android:textColorHint="@color/light_text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <SeekBar
+                        android:id="@+id/dryAromaSeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="10"
+                        android:min="1"
+                        android:progress="5" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            //Влажный аромат
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:text="@string/wet_aroma" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/wetAroma"
+                    style="@style/edit_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/wet_aroma"
+                    android:minWidth="200dp"
+                    android:textColorHint="@color/light_text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <SeekBar
+                        android:id="@+id/wetAromaSeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="10"
+                        android:min="1"
+                        android:progress="3" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            //Сладость
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:text="@string/sweetness" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/sweetness"
+                    style="@style/edit_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/sweetness"
+                    android:minWidth="200dp"
+                    android:textColorHint="@color/light_text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+
+                    <SeekBar
+                        android:id="@+id/sweetnessSeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="10"
+                        android:min="1"
+                        android:progress="7" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            //Кислотность
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:text="@string/acidity" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/acidity"
+                    style="@style/edit_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/acidity"
+                    android:minWidth="200dp"
+                    android:textColorHint="@color/light_text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <SeekBar
+                        android:id="@+id/aciditySeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="10"
+                        android:min="1"
+                        android:progress="3" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            //Тело
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:text="@string/body" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/body"
+                    style="@style/edit_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/body"
+                    android:minWidth="200dp"
+                    android:textColorHint="@color/light_text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <SeekBar
+                        android:id="@+id/bodySeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="10"
+                        android:min="1"
+                        android:progress="6" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            //Баланс
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/balance"
+                    style="@style/edit_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:background="@color/background"
+                    android:gravity="right"
+                    android:minWidth="200dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/balance"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical"
+                    android:gravity="bottom">
+
+
+                    <SeekBar
+                        android:id="@+id/balanceSeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="false"
+                        android:max="10"
+                        android:min="1"
+                        android:progress="3" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            //Дескрипторы
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:text="@string/flavour" />
+
+            <EditText
+                android:id="@+id/flavour"
+                style="@style/edit_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:gravity="left"
+                android:hint="@string/flavour"
+                android:minHeight="100dp"
+                android:textColorHint="@color/light_text" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_done_white"
+        app:backgroundTint="@color/button" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

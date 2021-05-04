@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/noteFragment">
+
+    <fragment
+        android:id="@+id/noteFragment"
+        android:name="com.example.coffeeapp.ui.note.NoteFragment"
+        android:label="@string/main_title"
+        tools:layout="@layout/note_list_prefab">
+        <action
+            android:id="@+id/action_noteFragment_to_addEditNoteFragment"
+            app:destination="@id/addEditNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditNoteFragment"
+        android:name="com.example.coffeeapp.ui.addeditnote.AddEditNoteFragment"
+        android:label="{fragment_title}"
+        tools:layout="@layout/note_editing_view">
+        <argument
+            android:name="note"
+            android:defaultValue="@null"
+            app:argType="com.example.coffeeapp.data.Note"
+            app:nullable="true" />
+        <argument
+            android:name="tags"
+            android:defaultValue="@null"
+            app:argType="com.example.coffeeapp.data.Tag[]"
+            app:nullable="true" />
+        <argument
+            android:name="fragment_title"
+            app:argType="string" />
+    </fragment>
+</navigation>
